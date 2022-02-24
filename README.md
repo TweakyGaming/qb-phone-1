@@ -3,6 +3,7 @@ Advanced Phone for QB-Core Framework :iphone:
 
 modified by Thodde26
 
+Sal
 ensure saltychat
 ensure saltyhud
 
