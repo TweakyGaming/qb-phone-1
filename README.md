@@ -9,6 +9,7 @@ Plugin Version: https://gaming.v10networks.com/saltychat/download/2.3.6
 ensure saltychat
 ensure saltyhud
 
+
 you must change folder name from qb-phone-saltychat to qb-phone
 
 pma-voice is deactivated
