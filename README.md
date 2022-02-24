@@ -3,13 +3,18 @@ Advanced Phone for QB-Core Framework :iphone:
 
 modified by Thodde26
 
-Sal
+Salty Server Version:  https://github.com/v10networkscom/saltychat-fivem/releases/tag/v0.0.4
+Plugin Version: https://gaming.v10networks.com/saltychat/download/2.3.6
+
 ensure saltychat
 ensure saltyhud
 
 you must change folder name from qb-phone-saltychat to qb-phone
 
 pma-voice is deactivated
+
+# qb-phone
+Advanced Phone for QB-Core Framework :iphone:
 
 # License
 
