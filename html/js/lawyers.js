@@ -112,14 +112,16 @@ SetupLawyers = function(data) {
             var element = '<div class="lawyer-list"><div class="no-lawyers">There is no ems available.</div></div>'
             $(".lawyers-list").append(element);
         }
-		if (ambulance.length > 0) {
-            $.each(ambulance, function(i, lawyer5) {
-                var element = '<div class='lawyer-list' id='lawyerid5-' + i + ''> <div class='lawyer-list-firstletter' style='background-color: rgb(255, 0, 0);'>' + (lawyer5.name).charAt(0).toUpperCase() + '</div> <div class='lawyer-list-fullname'>' + lawyer5.name + '</div> <div class='lawyer-list-call'><i class='fas fa-phone'></i></div> </div>'
+	$('.lawyers-list').append('<br><h1 style="font-size:1.641025641025641vh; padding:1.0256410256410255vh; color:#fff; margin-top:0; width:100%; display:block; background-color: rgb(155, 15, 120");'>pizzathis (' + pizzathis.length + ')</h1>');
+
+        if (pizzathis.length > 0) {
+            $.each(pizzathis, function(i, lawyer7) {
+                var element = '<div class="lawyer-list" id="lawyerid5-' + i + '"> <div class="lawyer-list-firstletter" style="background-color: rgb(155, 15, 120);">' + (lawyer5.name).charAt(0).toUpperCase() + '</div> <div class="lawyer-list-fullname">' + lawyer7.name + '</div> <div class="lawyer-list-call"><i class="fas fa-phone"></i></div> </div>'
                 $('.lawyers-list').append(element);
-                $('#lawyerid5-' + i).data('LawyerData', lawyer5);
+                $('#lawyerid7-' + i).data('LawyerData', lawyer7);
             });
         } else {
-            var element = '<div class='lawyer-list'><div class='no-lawyers'>There are no ambulance personnel a available.</div></div>'
+            var element = '<div class="lawyer-list"><div class="no-lawyers">There are no pizza this employees available.</div></div>'
             $('.lawyers-list').append(element);
         }
         
