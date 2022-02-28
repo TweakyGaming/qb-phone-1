@@ -6,7 +6,7 @@ SetupLawyers = function(data) {
     var taxi = [];
     var police = [];
     var ambulance = [];
-	var pizzathis = []; 
+    var pizzathis = []; 
 
     if (data.length > 0) {
 
@@ -29,7 +29,7 @@ SetupLawyers = function(data) {
             if (lawyer.typejob == "ambulance") {
                 ambulance.push(lawyer);
             }
-   			if (lawyer.typejob == 'pizzathis') {
+   	    if (lawyer.typejob == 'pizzathis') {
                 pizzathis.push(lawyer);
             }
 
@@ -112,13 +112,14 @@ SetupLawyers = function(data) {
             var element = '<div class="lawyer-list"><div class="no-lawyers">There is no ems available.</div></div>'
             $(".lawyers-list").append(element);
         }
-	$('.lawyers-list').append('<br><h1 style="font-size:1.641025641025641vh; padding:1.0256410256410255vh; color:#fff; margin-top:0; width:100%; display:block; background-color: rgb(155, 15, 120");'>pizzathis (' + pizzathis.length + ')</h1>');
+	    
+	$('.lawyers-list').append('<br><h1 style="font-size:1.641025641025641vh; padding:1.0256410256410255vh; color:#fff; margin-top:0; width:100%; display:block; background-color: rgb(155, 15, 120);">Pizzathis (' + pizzathis.length + ')</h1>');
 
         if (pizzathis.length > 0) {
-            $.each(pizzathis, function(i, lawyer7) {
-                var element = '<div class="lawyer-list" id="lawyerid5-' + i + '"> <div class="lawyer-list-firstletter" style="background-color: rgb(155, 15, 120);">' + (lawyer5.name).charAt(0).toUpperCase() + '</div> <div class="lawyer-list-fullname">' + lawyer7.name + '</div> <div class="lawyer-list-call"><i class="fas fa-phone"></i></div> </div>'
+            $.each(pizzathis, function(i, lawyer6) {
+                var element = '<div class="lawyer-list" id="lawyerid6-' + i + '"> <div class="lawyer-list-firstletter" style="background-color: rgb(155, 15, 120);">' + (lawyer5.name).charAt(0).toUpperCase() + '</div> <div class="lawyer-list-fullname">' + lawyer6.name + '</div> <div class="lawyer-list-call"><i class="fas fa-phone"></i></div> </div>'
                 $('.lawyers-list').append(element);
-                $('#lawyerid7-' + i).data('LawyerData', lawyer7);
+                $('#lawyerid6-' + i).data('LawyerData', lawyer6);
             });
         } else {
             var element = '<div class="lawyer-list"><div class="no-lawyers">There are no pizza this employees available.</div></div>'
