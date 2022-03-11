@@ -823,17 +823,17 @@ RegisterNetEvent('qb-phone:server:UpdateTweets', function(NewTweets, TweetData)
 	})
 	TriggerClientEvent('qb-phone:client:UpdateTweets', -1, src, NewTweets, TweetData, false)
     else
-	local InsertTweet = MySQL.Async.insert('INSERT INTO phone_tweets (citizenid, firstName, lastName, message, date, url, picture, tweetid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
-	TweetData.citizenid,
-	TweetData.firstName,
-	TweetData.lastName,
-	TweetData.message,
-	TweetData.time,
-	TweetData.url,
-	TweetData.picture,
-	TweetData.tweetId
-	})
-	TriggerClientEvent('qb-phone:client:UpdateTweets', -1, src, NewTweets, TweetData, false)		
+        local InsertTweet = MySQL.Async.insert('INSERT INTO phone_tweets (citizenid, firstName, lastName, message, date, url, picture, tweetid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
+            TweetData.citizenid,
+            TweetData.firstName,
+            TweetData.lastName,
+            TweetData.message,
+            TweetData.time,
+            TweetData.url:gsub("[%<>\"()\' $]",""),
+            TweetData.picture,
+            TweetData.tweetId
+        })
+        TriggerClientEvent('qb-phone:client:UpdateTweets', -1, src, NewTweets, TweetData, false)
     end
 end)
 
