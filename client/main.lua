@@ -665,6 +665,7 @@ RegisterNUICallback('PayInvoice', function(data, cb)
         cb(CanPay)
     end, society, amount, invoiceId, senderCitizenId)
     TriggerServerEvent('qb-phone:server:BillingEmail', data, true)
+    TriggerServerEvent('jim-payments:Tickets:Give', amount, society)
 end)
 
 RegisterNUICallback('DeclineInvoice', function(data, cb)
@@ -835,7 +836,6 @@ RegisterNUICallback('DeleteImage', function(image,cb)
     TriggerServerEvent('qb-phone:server:getImageFromGallery')
     cb(true)
 end)
-
 
 RegisterNUICallback('track-vehicle', function(data, cb)
     local veh = data.veh
